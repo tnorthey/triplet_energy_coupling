@@ -6,9 +6,9 @@
 tleap -f leap.src
 ```
 
-Software required: Amber 
+**Software required**: Amber 
 
-Files needed: .mol2, gaff.dat, frcmod.mecn
+**Files needed**: .mol2, gaff.dat, frcmod.mecn
 
 ### MD production run
 
@@ -18,7 +18,7 @@ Files needed: .mol2, gaff.dat, frcmod.mecn
 
 Runs a minimisation, followed by heating to 300 K for a random number of steps in the range [20000,30000], finally a production run is performed for x steps.
 
-Files needed: sample, run\_min, run\_heat, run\_prod, file.prmtop, file.rst7 
+**Files needed**: sample, run\_min, run\_heat, run\_prod, file.prmtop, file.rst7 
 
 ### Take snapshots of host:guest 
 
@@ -28,9 +28,9 @@ First generate xyz files which contain the coordinates of the guest with only on
 vmd -dispdev text -eofexit < select_residues.tcl
 ```
 
-Software required: VMD
+**Software required**: VMD
 
-Files needed: select\_residues.tcl
+**Files needed**: select\_residues.tcl
 
 ### Calculate the triplet couplings for (some of) these coordinates
 
@@ -52,6 +52,6 @@ Then, generate the qchem input files from these coords,
 
 Then k qchem .inp files will be created in the fed/ directory.
 
-Software required: octave or matlab, qchem
+**Software required**: octave or matlab, qchem
 
-Files needed: dist\_filter.m, create\_fed.sh, fed.template1, fed.tempate2
+**Files needed**: dist\_filter.m, create\_fed.sh, fed.template1, fed.tempate2
