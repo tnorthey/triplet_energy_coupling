@@ -1,5 +1,7 @@
 leap.log
 nohup.out
+dist.dat
+index.list
 file.*
 fed/*
 *.coords
