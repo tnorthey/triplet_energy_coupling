@@ -51,3 +51,7 @@ Then, generate the qchem input files from these coords,
 ```
 
 Then k qchem .inp files will be created in the fed/ directory.
+
+Software required: octave or matlab, qchem
+
+Files needed: dist\_filter.m, create\_fed.sh, fed.template1, fed.tempate2
