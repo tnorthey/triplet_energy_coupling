@@ -1,0 +1,10 @@
+leap.log
+nohup.out
+file.*
+fed/*
+*.coords
+*.rst7
+*.mdinfo
+*.out
+*.mdcrd
+*.xyz

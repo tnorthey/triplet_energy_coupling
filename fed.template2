@@ -1,0 +1,13 @@
+$end
+
+$rem
+   METHOD            CIS
+   BASIS             6-31G*
+   CIS_N_ROOTS       5
+   CIS_SINGLETS      false
+   CIS_TRIPLETS      true
+   STS_FED           true
+   STS_DONOR         1-23
+   STS_ACCEPTOR      24-35
+$end
+

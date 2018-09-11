@@ -1,0 +1,16 @@
+source leaprc.ff14ipq
+source leaprc.gaff
+param1 = loadamberparams gaff.dat
+param2 = loadamberparams frcmod.mecn
+
+guest = loadmol2 tx.mol2
+host = loadmol2 dcb.mol2
+host2 = loadmol2 methanol.mol2
+
+list
+check guest
+
+solvatebox guest host 8.00
+solvatebox guest host2 10.00
+saveamberparm guest file.prmtop file.rst7
+quit
