@@ -1,7 +1,7 @@
 # VMD for LINUXAMD64, version 1.9.2 (December 29, 2014)
 # Log file '1.log', created by user thomas
 
-mol new {../file.prmtop} type {parm7} first 0 last -1 step 1 waitfor 1
+mol new {file.prmtop} type {parm7} first 0 last -1 step 1 waitfor 1
 mol addfile {03_Prod.mdcrd} type {crdbox} first 0 last -1 step 1 waitfor -1 0
 for {set i 1} {$i < 21} {incr i} {
   puts "I inside first loop: $i"

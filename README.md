@@ -34,15 +34,13 @@ vmd -dispdev text -eofexit < select_residues.tcl
 
 ### Calculate the triplet couplings for (some of) these coordinates
 
-Here the FED method implemented in qchem is used to obtain triplet couplings between the host and the guest. Qchem input files are generated from the xyz trajectories of each host:guest combination using an octave script,
+Here the FED method implemented in qchem is used to obtain triplet couplings between the host and the guest. First the coordinates for each nearby host:guest combination are obtained using an octave script,
 
 ```matlab
-octave
-> cutoff = 15;
-> [dist_,x]=dist_filter('residue1.xyz',cutoff); 
+octave:> [dist_,x]=dist_filter(fname,Na,Nb,cutoff)
 ```
 
-This generates k .coords files, where k is the number of frames in the xyz file with the distance between the guest and the host (distance between their geometric centres) less than the cutoff (Angstrom). 
+where *fname* is the name of the xyz trajectory file, *Na* is the number of atoms in molecule *a* and *Nb* is the number of atoms in molecule *b*, the *cutoff* radius (Angstrom) tells the script to ignore guest:host combinations that are further away than this. This generates *k* .coords files, where *k* is the number of frames in the xyz file with the distance between the guest and the host (distance between their geometric centres) less than the *cutoff* (Angstrom). 
 
 Then, generate the qchem input files from these coords, 
 
@@ -50,8 +48,12 @@ Then, generate the qchem input files from these coords,
 ./create_fed.sh
 ```
 
-Then k qchem .inp files will be created in the fed/ directory.
+and *k* qchem .inp files will be created in the fed/ directory.
 
-**Software required**: octave or matlab, qchem
+**Software required**: octave (or matlab), qchem
 
 **Files needed**: dist\_filter.m, create\_fed.sh, fed.template1, fed.tempate2
+
+### Analysis
+
+
