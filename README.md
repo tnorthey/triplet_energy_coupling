@@ -56,4 +56,15 @@ and *k* qchem .inp files will be created in the fed/ directory.
 
 ### Analysis
 
+The reader.sh script reads the qchem FED output file(s),
 
+```bash
+./reader.sh frame001.out
+```
+
+creating files,
+
+- coords.txt, coordsa.txt, coordsb.txt (contains the coordinates of molecule a and b)
+- triplet\_states.txt (contains the amplitudes)
+- excitation\_energies.txt (contains the excitation energies in eV)
+- fed\_couplings.txt (contains the couplings (eV) between each state)
